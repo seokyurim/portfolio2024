@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트1_NASA</title>
+    
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 폰트어썸연결 -->
+    <script src="https://kit.fontawesome.com/f3c480df09.js" crossorigin="anonymous"></script>
+<!-- 외부스크립트연결 -->
+<script src="js/js.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+
+$(function(){
+    $('.titleBox li').click(function(){
+        
+        // var q = $(this).index()
+        // console.log(q)
+        // $('.listBox li').css({'display':'none'})
+        // $('.listBox li').eq(q).css({'display':'flex'})
+        // $('.titleBox li').removeClass('on')
+        // $(this).addClass('on'); 
+           // 트레일러에 li를 클릭했을 때 (vid)
+        // $('.titleBox li').click(function(){
+        //     var r =$(this).index()
+        //     $('.vid').css({'display':'none'})
+        //     $('.vid').eq(r).css({'display':'flex'})
+        //     $('.titleBox li').removeClass('on')
+
+            // 클릭한 나자신에게 클래스'on 값 더하기
+        //     $(this).addClass('on');
+        // })
+
+
+            // 트레일러에 li를 클릭했을 때 (img)
+        // $('.titleBox li').click(function(){
+        //     var i =$(this).index()
+        //     $('.container p').css({'display':'none'})
+        //     $('.container p').eq(i).css({'display':'flex'})
+        //     $('.titleBox li').removeClass('on')
+
+            // 클릭한 나자신에게 클래스'on 값 더하기
+        //     $(this).addClass('on')
+        // })
+
+        var q = $(this).index()
+        console.log(q)
+
+        if( q == 0){
+            $('.tabBar .listBox div').css({'display':'flex'})
+            $('.tabBar .listBox2').css({'display':'none'})
+            $('.tabBar .listBox3').css({'display':'none'})
+            $('.titleBox li').removeClass('on')
+            $(this).addClass('on');
+        }
+        if(q == 1){
+            $('.tabBar .listBox div').css({'display':'none'})
+            $('.tabBar .listBox2').css({'display':'flex'})
+            $('.tabBar .listBox3').css({'display':'none'})
+            $('.titleBox li').removeClass('on')
+            $(this).addClass('on');
+        }
+        if(q == 2){
+            $('.tabBar .listBox div').css({'display':'none'})
+            $('.tabBar .listBox2').css({'display':'none'})
+            $('.tabBar .listBox3').css({'display':''})
+            $('.titleBox li').removeClass('on')
+            $(this).addClass('on')
+        }
+    })
+
+    let selectedDate;
+
+        // 예약 버튼 클릭 시 동작
+        $("#reserveButton").on("click", function () {
+            if (selectedDate) {
+                // 여기에 예약 처리 로직 추가
+                console.log("예약 날짜:", selectedDate);
+                alert("예약이 완료되었습니다. " + selectedDate);
+            } else {
+                alert("날짜를 선택해주세요.");
+            }
+        });
+
+        // 테이블 셀 클릭 시 동작
+        $("#calendarTable td").on("click", function () {
+            // 여기에 선택한 날짜에 대한 동작 추가
+            const clickedDate = $(this).find("p").text();
+            console.log("클릭한 날짜:", clickedDate);
+
+            // 선택한 날짜 표시
+            $(".selected-date").removeClass("selected-date");
+            $(this).addClass("selected-date");
+
+            // 선택한 날짜 저장
+            selectedDate = clickedDate;
+        });
+
+
+
+    // 테이블 셀 클릭 시 동작
+    $("#calendarTable td").on("click", function () {
+        // 여기에 선택한 날짜에 대한 동작 추가
+        const clickedDate = $(this).find("p").text();
+        console.log("클릭한 날짜:", clickedDate);
+
+        // 선택한 날짜 표시
+        $(".selected-date").removeClass("selected-date");
+        $(this).addClass("selected-date");
+
+        // 선택한 날짜 저장
+        selectedDate = clickedDate;
+    })
+
+    $('.trailer li').click(function(){
+        
+        var q = $(this).index()
+        console.log(q)
+
+        $('.tabBar .listBox3 .container p').css({'display' : ''});
+        $('.tabBar .listBox3 .container p').eq(q).css({'display':'flex'});
+    })
+    
+})
+
+</script>
+
+
+
+
+</head>
+<body>
+    <header class="box1">
+        
+        <div class="box1_inner">
+            
+                <div class="logo">
+                    <img src="img/nasa_logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul>    
+                        <li><a href="#"> NASA에 대하여 </a></li>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">탐구활동 및 자료</a></li>
+                        <li><a href="#">예약하기</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </div>
+
+                <div class="util">
+                    <ul>
+                        <li><a href="#"><p>LogIn</p></a></li>
+                        <li><a href="#"><i class="fa-solid fa-comments"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-blog"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="box2">
+            <div class="vid">
+                <video autoplay loop muted>
+                    <source src="img/nasa1_bg.mp4">
+                </video>
+            </div>
+            <div class="hero">
+            
+                <div class="hero_inner">
+                
+                    <h2>NASA 오늘의 <span>Isuue</span></h2>
+                    <p>플로리다 주 펜사콜라에 있는 Creative Learning Academy의 학생들은 이번 주에 국제 우주 정거장 에 탑승한 NASA 우주비행사의 이야기를 들을 수 있는 기회를 갖게 됩니다 .</p>
+                    <div class="btn">자세히 보기	&#8594; </div>
+                </div>
+            </div>
+        </div>
+    
+    </header>
+    <div class="box3"> 
+        
+        <div class="box3-1">
+            <span></span>
+            <p><em>Explore</em> NASA 소개</p>
+            <span></span>
+        </div>
+        <div class="box3-2">
+                
+                <div class="box3-2-1">
+                    <img src="img/nasa2_img1.png" alt="">
+                </div>
+                    <div class="box3-2-2">
+                        <div class="imgBox">
+                            <img src="img/nasa2_img2.png" alt="">
+                        </div >
+                        
+                        <div class="txtBox_inner"><span>NASA는 미국 산업의 성장을 촉진하고 전국 및 국제적으로 고품질의 고임금 일자리를 지원하여 국가의 경제 경쟁력에 기여합니다.......</span>
+                            <p> more &#8594; </p>
+                        </div>
+                        
+                    </div>
+                
+        </div>
+    </div>
+
+    <div class="box4">
+        <div class="title_Top">
+
+            <div class="title_Top_inner">
+                <span></span>
+                <p><em>순간포착</em> News</p>
+                <span></span>
+            </div>
+        
+<!-- ################################# -->
+
+        <div class="tabBar">
+            <div class="titleBox">
+                    <ul>
+                        <li  class="on">news </li>
+                        <li> video</li>
+                        <li> Image</li>
+                    </ul>
+            </div>
+            <div class="listBox">
+                <div class="news" style="display: block;">
+                    <ul>
+                        <li>
+                            <div class="newsbox1">
+                            <img src="img/nasa3_img1.png" alt="">
+                            <p>NASA의 프시케 우주선, 소행성으로 가는 도중 광학 통신 데모</p> 
+                            <span>  Click</span>
+                            </div>
+                        </li>
+    
+                        <li> 
+                            <div class="newsbox2">
+                                <img src="img/nasa3_img2.png" alt="">
+                                <p>NASA 로버 챌린지에서 경쟁할 전 세계 수십 개의 학생 팀</p>
+                                <span>Click</span>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="newsbox3">
+                                <img src="img/nasa3_img3.png" alt="">    
+                                <p>달과 화성에 대한 임무를 계획할 때 핵심 요소인  우주에서 식물 재배</p>
+                                <span>Click</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+
+            <div class="listBox2" style="display: none;">
+                <video class="video" loop muted autoplay>
+                    <source src="img/nasa3-2.mp4">
+                </video>
+                <p class="vid_inner"> <strong>아르테미스 1세 이륙</strong>
+                <span>오리온 우주선을 탑재한 NASA의 우주 발사 시스템이 2022년 11월 16일 동부 표준시 기준 오전 1시 47분에 플로리다 케네디 우주 센터의 발사 단지 39B에서 패드에서 이륙합니다.</span></p>
+            </div>
+
+            <div class="listBox3" style="display: none;">
+                <div class="container">
+                    <p style="display:flex;"><img src="img/nasa3-1_img1.png" alt=""></p>
+                    <p><img src="img/nasa4_img1.jpg" alt=""></p>
+                    <p><img src="img/nasa3-1_img9.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img10.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img11.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img6.jpg" alt=""></p>
+                    <p><img src="img/nasa3-1_img7.jpg" alt=""></p>
+                    <p><img src="img/nasa3-1_img8.jpg" alt=""></p>
+                    <p><img src="img/nasa3-1_img12.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img13.png" alt=""></p>
+                </div>
+                <div class="trailer"> 
+                    <ul>
+                        <li><img src="img/nasa3-1_img1.png" alt=""></li>
+                        <li><img src="img/nasa4_img1.jpg" alt=""></li>
+                        <li><img src="img/nasa3-1_img9.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img10.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img11.png" alt=""></li> 
+                        <li><img src="img/nasa3-1_img6.jpg" alt=""></li>
+                        <li><img src="img/nasa3-1_img7.jpg" alt=""></li>
+                        <li><img src="img/nasa3-1_img8.jpg" alt=""></li>
+                        <li><img src="img/nasa3-1_img12.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img13.png" alt=""></li>
+                        </ul>
+                    
+                </div>
+
+                
+            </div>
+            <p class="more">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </p>
+        </div>
+
+        <!-- <div class="tabBar2" >
+            <div class="titleBox2" >
+                <ul>
+                    <li  class="on">news </li>
+                    <li > video</li>
+                    <li> Image</li>
+                </ul>
+            </div>
+            <div class="listBox2" style="display: flex;">
+                <video class="vid" loop muted autoplay>
+                    <source src="img/nasa3-2.mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="tabBar3">
+            <div class="titleBox3">
+                <ul>
+                    <li  class="on">news </li>
+                    <li> video</li>
+                    <li > Image</li>
+                </ul>
+            </div>
+            <div class="listBox3">
+                <div class="container">
+                    <p style="display:flex;"><img src="img/nasa3-1_img1.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img2.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img3.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img4.png" alt=""></p>
+                    <p><img src="img/nasa3-1_img5.png" alt=""></p>
+                </div>
+                <div class="trailer"> 
+                    <ul>
+                        <li><img src="img/nasa3-1_img1.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img2.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img3.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img4.png" alt=""></li>
+                        <li><img src="img/nasa3-1_img5.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        -->
+
+    </div>
+</div>
+
+
+    <div class="box5">
+        <div class="title"><p><span>신비로운</span>우주 탐구 활동 같이 해보아요!</p></div>
+        <div class="listBox1">
+            <ul>
+                <li>
+                    <img src="img/nasa4_img1.png" alt="">
+                    <div class="box5_inner1">
+                        <strong>별자리 찾기</strong>
+                        <p>전문 천문학자가 작성한 간략한 설명과 함께 매혹적인 별을 찾아보고 감상해보아요.</p>
+                    </div>
+                </li>
+                <li class="img2">
+                    
+                    <img src="img/nasa4_img2.png" alt="">
+                    <div class="box5_inner2">
+                        <strong>내 주변 천문대 찾기</strong>
+                        <p>가장 가까운 곳에서 우주를 관찰하며 매일 다른 하늘을 확인해보세요.</p>
+                    </div>
+                </li>
+                <li> 
+                    <img src="img/nasa4_img3.png" alt="">
+                    <div class="box5_inner3">
+                        <strong>E-BOOK</strong> 
+                        <p>역사를 기록과 우주를 탐험할 수 있게 해주는 E-reader 디지털 책으로 함께 공부해보아요.</p>
+                    </div>
+                </li>   
+            </ul>
+        </div>
+    </div>
+
+    <div class="box6">
+        
+        <div class="box6-1">
+            <span></span>
+            <p><em>단체&개인</em> 방문예약</p>
+            <span></span>
+        </div>
+        
+        <div class="bigBox">
+            <div class="formBox">
+                <h3><i class="fa fa-circle" aria-hidden="true"></i>예약옵션을 선택해주세요</h3>
+    
+                <div class="txtBox">
+                    <form action="#">
+                        
+                        <div class="single">
+                            <table>
+                                <tr>
+                                    <td>단체</td>
+                                    <td>개인</td>
+                                </tr>
+                            </table>
+                        </div>
+                    
+                        <div class="name">
+                            <label for="name">성명</label>
+                            <input type="text" id="name" placeholder="이름을 기입해주세요" autofocus>
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </div>
+                
+                        <div class="people">
+                            <label for="people">인원 수</label>
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <select name="people" id="people">
+                                <option value="1">1명</option>
+                                <option value="2">2명</option>
+                                <option value="3">3명</option>
+                                <option value="4">4명</option>
+                                <option value="5">5명</option>
+                                <option value="5">6명</option>
+                                <option value="5">7명</option>
+                                <option value="5">8명</option>
+                            </select>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            
+        
+            <div class="formBox1">
+
+                <h3><i class="fa fa-circle" aria-hidden="true"></i>방문하실 날짜를 선택해 주세요</h3>
+                <div class="txtBox">
+
+                    <form action="#" class="form">
+
+                        <div class="check">
+                            <ul>
+                                <li>		&#9679; 예약가능</li>
+                                <li>	&#10061;잔여 수량 없음</li>
+                                <li>&#9678;미운영/준비중</li>
+                            </ul>
+                            <button type="button" id="reserveButton">예약하기</button>
+                        </div>
+                        
+                        <div class="cal001">
+                            <h2>November. 2023</h2>
+                            <table id="calendarTable">
+                                <thead>
+                                    <tr>
+                                        <th>일</th>
+                                        <th>월</th>
+                                        <th>화</th>
+                                        <th>수</th>
+                                        <th>목</th>
+                                        <th>금</th>
+                                        <th>토</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>19</p></td>
+                                        <td><p>20</p></td>
+                                        <td><p>21</p></td>
+                                        <td><p>22</p></td>
+                                        <td><p>23</p></td>
+                                        <td><p>24</p></td>
+                                        <td><p>25</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </form>
+                        
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="box7">
+        <div class="title">
+            <strong>더 많은 과학, 더 많은 기회</strong>
+            <p>
+                NASA는 항공과 우주에서 미지의 세계를 탐험하고 
+                인류의 이익을 위해 혁신하며 발견을 통해 세상에 영감을 줍니다.
+            </p>
+        </div>
+        
+
+    </div>
+    <div class="box8">
+
+        <div class="map">
+                <div class="map_inner">
+                    <span></span>
+                    <p>오시는 길</p>
+                    <span></span>
+                </div>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99370.1530811657!2d-77.09697636445446!3d38.893859154820184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2z66-46rWtIOybjOyLse2EtCBEQyDsm4zsi7HthLQgRC5DLg!5e0!3m2!1sko!2skr!4v1699926620488!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        <div class="listBox8">
+            <strong>nasa 주소</strong>
+            <p class="listBox8_txt"> 워싱턴 D.C. 메리 W. 잭슨 NASA 헤드쿼터 빌딩,미합중국의 정부독립기관, 미국 남부 텍사스주 휴스턴</p>
+        </div>
+    </div>
+</div>
+
+    <div class="box9">
+        <footer>
+            <div class="footer_logo">
+                <img src="img/footer_logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">더 많은 NASA 소셜 계정 </a></li>
+                <li><a href="#"> 회사소개 </a></li>
+                <li><a href="#"> 인재 채용 </a></li>
+                <li><a href="#"> 미디어용 </a></li>
+                <li><a href="#"> 이용약관 </a></li>
+                <li><a href="#"> 접근성 </a></li>
+                <li><a href="#"> 개인정보처리방침 </a></li>
+                <li><a href="#"> NASA에 문의하세요 </a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
