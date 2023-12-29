@@ -237,7 +237,7 @@ body{cursor: url('img/cursor.png')1 1, auto;}
 
 
 .catBox {
-  height: 40vh;
+  height: 32vh;
   width: 90%;
   border: 5px solid #000;
         border-radius: 20px;
@@ -521,7 +521,7 @@ overflow: hidden;
 }
 
 .gall_box {
-
+  padding: 20px;
   display: flex;
 }
 
@@ -559,39 +559,45 @@ overflow: hidden;
 /* 이미지 박스 설정 */
 .new{height: 80vh;
   display: inline-block;
-  cursor: pointer;}
+  cursor: pointer;  margin: 10px;
+  margin: 0 auto;
+  width: 85%;
+  
+}
 
 
 .img_Box1 {
   display: flex;
-  margin: 10px;
+  padding: 10px 0 ;
   transition: transform 1s ease-in-out, filter 1s ease-in-out;
 }
 
 .img_Box2 {
   display: flex;
-  margin: 10px;
+  padding: 10px 0 ;
   transition: transform 1s ease-in-out, filter 1s ease-in-out;
 }
 
 .img_Box3 {
   display: flex;
-  margin: 10px;
+  padding: 10px 0 ;
   transition: transform 1s ease-in-out, filter 1s ease-in-out;
 }
 
-.img_Box1 img {width: 95%;
-              
+.img_Box1 img {width: 90%;
               height: 450px;}
-.img_Box2 img {width: 95%;
+.img_Box2 img {width: 90%;
                 height: 450px;}
-.img_Box3 img {width: 95%;
+.img_Box3 img {width: 90%;
                   height: 450px;}
+
+.icon {display: block;}
 /* 상세설정 */
 
 .img_box_1{width: 50%;
           height: 100%;
-          position: relative;}
+          position: relative;
+          }
 
 .img_box_2 {width: 50%;
           height: 50%;

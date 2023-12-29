@@ -1,0 +1,581 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Julee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Julee&family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@include hideTapHighlightColor();
+        @include hardwareAccel();
+        @include improveAntiAlias();
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200&display=swap');
+*{margin: 0;    padding: 0;}
+ul,ol{list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-family: 'Inria Serif', serif;}
+
+/* 페이지1 설정 */
+.page1{
+    overflow:hidden;
+      position: relative;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      
+      height: 100vh;
+      
+      background: linear-gradient(to right, rgba(36,31,31,1) 0%, rgba(36,31,31,1) 32%, rgba(74,71,70,1) 100%);
+      color: #fff;
+      text-align: center;
+      background: #111;
+       padding: 1em;
+       
+       color: #eee;
+       font-size: 1em;
+       line-height: 1;
+       text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+       letter-spacing: 0.125em;
+       animation-duration: 0.01s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+  }
+
+  @font-face {
+    font-family: 'Nintendoid1';
+    font-style: normal;
+    font-weight: 400;
+    src:  url(data:font/ttf;base64,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) format('woff2');
+  }
+  .vignette{
+    position:absolute;
+    width:100%; height:100%;
+    box-shadow:inset 0px 0px 150px 20px black;
+    mix-blend-mode: multiply;
+    animation: vignette-anim 1s infinite; /* IE 10+, Fx 29+ */
+  }
+  
+  .noise {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+    opacity: .15;
+  }
+
+  .line{
+    position:absolute;
+    height:100%; width:1px;
+    opacity:0.1;
+    background-color:rgb(225, 225, 225);
+    opacity: 0.1;
+    transform: translate3d(-800px, 500px, 20px);
+    transition: transform 2s, opacity 2s Infinite;}
+
+  .pagetitle{position:relative;
+}
+
+.pagetitle p { padding: .3em 1em .25em;    
+    font-weight: 400;
+    font-size: 60px;
+    color: white;
+    font-family: 'Bellefair', serif;
+    position:relative;
+    line-height:1.3;}
+    .pagetitle p em {color: #A00722;
+        list-style: none;}
+    @keyframes textflicker {
+        from {
+          text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+        }
+        to {
+          text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+        }
+      }
+
+.fa-bars {color: #fff;
+        font-size: 20px;
+        margin: 50px;
+        position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    cursor: pointer;}
+
+/* 마우스 설정 */
+.scroll-downs a {
+    padding-top: 80px;
+    color: #fff;
+    position: absolute;
+    font-size: 12px;
+    top: 1%;
+    right: 0%;
+    left: 0%;
+}
+.scroll-downs a span {
+    position: absolute;
+    top: 0%;
+    width: 24px;
+    height: 24px;
+    left: 49%;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+    font-size: 55px;
+
+  }
+.scroll-downs a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+.scroll-downs a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+.scroll-downs a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  @-webkit-keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+/* header 설정 */
+header {background-color: #000;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background-image: url(img/flim1_bg.png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: 100% 100%;
+            flex-flow: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+.header_title {flex-flow: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.title {color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 0.8;
+    padding: 50px 0;}
+span {font-size: 30px;}
+
+/* header inner 설정 */
+.header_inner {display: flex;
+    position: relative;}
+
+.header_img {width: 50%;}
+
+.header_img img {width: 800px;
+    height: 100%;
+}
+
+/* headertxt 설정 */
+.header_txt {width: 50%;
+            padding-left: 60px;}
+.header_txt1 {color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    display: inline-block;
+    text-align: start;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    
+    }
+.header_txt1 p {color: #fff;
+        font-size: 17px;
+        display: inline-block;
+        width: 60%;
+        font-family: 'Noto Sans KR', sans-serif;
+        padding-top: 5px;
+        }
+
+.header_txt2 {color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    flex-direction: column;
+    
+    font-family: 'Inria Serif', serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;}
+.header_txt2 P {padding-bottom: 10px;}   
+
+.txt2_img {
+            height: 290px;
+            display: flex;
+            border: 2.5px #Fff solid;
+            padding: 10px 0;
+            border-radius: 10px;
+            position: relative;
+            }
+.txt2_img iframe {border-radius: 10px;}
+.txt2_img img{ width: 100%;
+            height: 100%;
+            margin: 0 3px;}
+
+
+
+/* sec설정 */
+.ironman {background-color: #000;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/ironman_bg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        flex-flow: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+        .title1 {color: #fff;
+            font-weight: bold;
+            font-size: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 0.8;
+            margin: 30px;
+            z-index: 2;}
+        span {font-size: 30px;}
+        .semibg {position: absolute;
+                width: 30%;
+                height: 200px;
+                z-index: 1;
+                top: 8%;}
+                .semibg img {width: 100%;
+                            height: 100%;}
+        .sec1_img {width: 60%;
+            height: 55%;
+            z-index: 2;
+            padding-top: 30px;}
+            .sec1_img  img {width: 100%;
+            height: 100%;}
+        .sec1_txt {color: #fff;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            text-align: center;
+            padding: 20px;
+            padding-top: 30px;
+            }
+            .sec1_txt p {color: #fff;
+                font-size: 15px;
+                display: inline-block;
+                font-family: 'Noto Sans KR', sans-serif;
+                padding-top: 20px;
+                width: 51%;}
+
+/* sec2 설정 */
+
+.line {background-color: #Fff;
+        width: 64%;
+        height: 2px;
+        float: right;}
+.mcu {background-color: #000;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/mcu_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+}
+.mcu_title  {width: 36%;
+    float: left;}
+.title2{color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    padding: 100px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing:5px}
+.mcu_bg {height: 50%;
+    }
+.mcu_bg img {}
+
+.mcu_img {width: 64%;
+    float: left;
+    /* background-image: url(img/a-1.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+             */
+            padding-top: 50px;}
+.sec2_img {width: 70%;
+        height: 400px;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: flex-end;
+        align-items: flex-end;}
+        .sec2_img img {width: 100%;
+            height: 100%;
+            margin: 10px;}
+
+.sec2_img1 {width: 70%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+        .sec2_img1 img {width: 100%;
+            height: 100%;
+            margin: 10px;}
+
+.mcumark {width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 2%;
+    left: 48%; 
+    opacity: 0.8;}
+    .mcumark img {width: 100%;
+        height: 100%}
+
+/* sec3 설정 */
+.dr{background-color: #000;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/flim3_bg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        flex-flow: column;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+
+.title3 {color: #fff;
+            font-weight: bold;
+            font-size: 50px;
+            display: inline-block;
+            text-align: center;
+            padding-bottom: 50px;}
+
+/* dr_inner 설정 */
+.dr_inner {display: flex;
+            flex-direction: row-reverse;}
+.dr_img {width: 50%;}
+.dr_img img {width: 50%;}
+.dr_txt {width: 50%;
+    padding-right: 50px;}
+
+/* txt 설정 */
+.dr_txt1 {color: #fff;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            text-align: end;
+            padding: 30px 0;
+            flex-direction: column;
+            padding-bottom: 30px;}
+
+.dr_txt1 p {color: #fff;
+                font-size: 15px;
+                display: inline-block;
+                font-family: 'Noto Sans KR', sans-serif;
+                width: 48%;
+                padding-top: 10px;}
+        
+.dr_txt2 {color: #fff;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Inria Serif', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 10px;}
+.dr_txt2 P {padding-bottom: 10px;}
+.txt2_img2 {
+height: 310px;
+display: flex;
+border: 2.5px #Fff solid;
+padding: 10px 0;
+border-radius: 10px;
+position: relative;
+                    }
+                    .txt2_img2 iframe {border-radius: 10px;}
+.txt2_img2 img{ width: 100%;
+                    height: 100%;
+                    margin: 0 3px;}
+        .btn {display: inline-block;}
+        .btn a{background-color: #D70027;
+                text-align: center;
+                border-radius: 20px;
+                font-weight: 300;
+                font-size: 17px;
+                padding: 4px 10px;
+                color: #fff;
+                position: absolute;
+                top: 85%;
+                left: 42%;}
+                .btn a:hover {background-color: #fff;
+                    color: #D70027;}
+
+/* sec4 설정 */
+.line {background-color: #Fff;
+    width: 64%;
+    height: 2px;
+    float: right;
+    margin-top: 20px;}
+.etc {background-color: #000;
+position: relative;
+height: 100vh;
+width: 100%;
+}
+.etc_title  {width: 36%;
+    float: left;}
+.title4{color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    padding-top: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing:7px}
+.etc_bg {height: 50%;
+    width: 80%;
+    padding-left: 50px;}
+.etc_bg img {width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;}
+
+.etc_img {width: 64%;
+    float: left;
+    /* background-image: url(img/a-1.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+             */
+            padding-top: 50px;}
+.sec3_img {width: 70%;
+        height: 400px;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: flex-end;
+        align-items: flex-end;}
+    .sec3_img img {width: 100%;
+            height: 100%;
+            margin: 10px;}
+
+.sec3_img1 {width: 70%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+    .sec3_img1 img {width: 100%;
+            height: 100%;
+            margin: 10px;}
+
+footer {height: 100px;
+    background-color: #424242;
+    z-index: 2;
+    position: relative;
+    
+            width: 100%;
+        }
+footer p {font-size: 14px;
+            color: #fff;
+            text-align: start;
+            width: 100%;
+            padding: 41px 0 ;}
+#menu {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: -100%; /* 초기에 메뉴를 숨깁니다. *//* 원하는 메뉴 너비로 조정하세요. */
+
+  transition: left 0.1s ease; }
+    .nav img {width: 200px;
+          height: 70px;
+          position: absolute;
+          top: 7%;}
+
+.nav{ background-color: #000;
+    /* background-image: url(img/tab_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+  height: 100vh;
+  position: relative;
+  width: 30%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;}
+
+.nav ul {}
+.nav li {margin-bottom: 50px;}
+.nav a {color: #fff;
+  font-size: 35px;
+  font-family: 'Notable', sans-serif;}
+.nav i {position: absolute;
+  color: #fff;
+  top: 30px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;}
+.nav a:hover {color: #000;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);}
+

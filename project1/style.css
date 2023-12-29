@@ -10,7 +10,9 @@ a {text-decoration: none;
 img {border: none;
     vertical-align: bottom;}
 body{font-family: 'Gowun Batang', serif;
-    font-family: 'Orbitron', sans-serif;}
+    font-family: 'Orbitron', sans-serif;
+}
+body.fix {overflow: hidden;}
 /* 박스1설정 */
 .box1 {
 width: 100%;
@@ -25,7 +27,7 @@ padding-top: 10px;
 position: relative;
 z-index: 1;}
 
-.box1 .logo {width: 200px;}
+.box1 .logo {width: 150px;}
 .box1 .logo img {width: 100%;}
 .box1 .menu ul {display: flex;}
 .box1 .menu a {font-weight: bold;
@@ -78,7 +80,7 @@ background-color: #000;
     bottom: 20%;
     left:0;
     color: #fff;
-    background-color: rgba(255, 255, 255,0.2);
+    background-color: rgba(255, 255, 255,0.1);
     padding: 30px 40px ;
     width: 100%;
     box-sizing: border-box;
@@ -100,7 +102,7 @@ background-color: #000;
         padding: 10px;
         cursor: pointer;
         }
-.hero .btn:hover {background-color: #002396;
+.hero .btn:hover {background-color: #8DDEC1;
             font-weight: 600;}
 
 
@@ -166,18 +168,17 @@ justify-content: space-between;}
                         font-size: 19px;
                         border-radius: 15px;
                         }
-.box3-2-2 p{color: #333;
-            font-size: 19px;
-            justify-content: end;
-            align-items: flex-end;
+.box3-2-2 p{color: #444;
+            font-size: 14px;
+            justify-content: flex-end;
             display: flex;
-            margin-right: 10px;}
+            padding: 10px;}
 .box3-2 p:hover {color: #8DDEC1;}
 
 
 
 /* 박스4설정 */
-.box4 {height: 80vh;
+.box4 {height: 83vh;
     background-color: #000;
     position: relative;}
 .title_Top_inner {font-size: 45px;
@@ -320,11 +321,12 @@ justify-content: space-between;}
 .titleBox3 li.on {color: #8DDEC1;} 
 .listBox3 {width: 1000px;
     margin: 20px auto;}
-.container {width: 800px;
+.container {width: 850px;
                 height: 450px;
                 margin: 0 auto;
                 padding-top: 30px;
-                position: relative;}
+                position: relative;
+                overflow: hidden;}
 
 .container p {width: 100%;
         height: 100%;
@@ -334,7 +336,7 @@ justify-content: space-between;}
         display: none;}
 .container img {width: 100%;
             height: auto;}
-
+            
 .trailer {width: 800px;
         height:  100px;
         margin: 0 auto;
@@ -348,7 +350,7 @@ justify-content: space-between;}
         .trailer:hover ul { animation-play-state: paused; }
 .trailer li {
         padding-top: 20px;
-        border: 1px solid #000;
+        
         box-sizing: border-box;
         width: 150px;
         height: 100px;
@@ -357,15 +359,16 @@ justify-content: space-between;}
         .trailer li:hover {transform: scale(1.2);}
 .trailer li img{width: 100%;
                 height: 100% ;
+                cursor: pointer;
                 transform: translateY(-10%);}
 
-
+                .trailer li.on {display: flex;}
 
 /* 애니매이션  */
 @keyframes ani1 {
     0%{left: 0%;}
     50% {left: -150%;}
-    50.0001%{left: 100%;}
+    50.0001%{left: 50%;}
     100% {left: 0% ;}
 
 }
@@ -400,7 +403,7 @@ justify-content: space-between;}
                 display: flex;
                 justify-content: center;
                 width: 50%;
-                margin-right: 40px;
+                margin-right: 180px;
                 line-height: 1.6;}
 .box5 .title p {width: 60%;
                 text-align: end;}
@@ -414,11 +417,13 @@ justify-content: space-between;}
     background-color: rgba(0, 0, 0,0.2);
     border-radius: 20px;
     padding: 10px;
-    width: 80%;}
+   
+    width: 100%;}
     
 .listBox1 li {
     color: #fff;
     display: flex;
+    margin-left: 50px;
 }
 .box5 li>div {margin-left: 40px;
             display: flex;
@@ -446,7 +451,7 @@ justify-content: space-between;}
 
 /* 박스6설정 */
 .box6 {
-    height: 70vh;
+    height: 65vh;
     background-color: #000;
     position: relative;
 }
@@ -485,7 +490,8 @@ justify-content: space-between;}
 .bigBox {display: flex;
     width: 80%;
     margin: 0 auto;
-    height: 450px;}        
+    height: 450px;
+    }        
     
 
 /* formBox 설정 */
@@ -518,11 +524,14 @@ i{color: #8DDEC1;
         text-align: center;
         padding: 20px;
         font-weight: bold;
-        font-size: 20px;}
-        .single td:nth-child(1):hover {background-color: #002396;
+        font-size: 20px;
+        cursor: pointer;}
+        .single td.on {background-color: #002396;
+            color: #fff;}
+        /* .single td:nth-child(1):hover {background-color: #002396;
                                         color: #fff;}
         .single td:nth-child(2):hover {background-color: #002396;
-                                        color: #fff;}
+                                        color: #fff;} */
     .name {padding: 20px;
             position: relative;
             border-bottom: 2px solid #000;}
@@ -533,6 +542,7 @@ i{color: #8DDEC1;
         background: transparent;
         padding: 10px;
         position: absolute;
+        background-color: #fff;
                 right:  0;}
     .name i {font-size: 20px;
                             color: #000;
@@ -556,7 +566,7 @@ i{color: #8DDEC1;
     
 /*  formBox1 설정 */
 
-.formBox1 {width: 70%;
+.formBox1 {width: 60%;
     height: 100%;
     background-color: #ddd;
     display: flex;
@@ -583,7 +593,7 @@ i{color: #8DDEC1;
                         padding-top: 10px;
                         margin-left: 10px;}
 .check li {margin-bottom: 10px;}
-button {
+button {margin: 0 10px;
         font-size: 15px;
         background-color: #002396;
         color: #fff;
@@ -591,9 +601,8 @@ button {
         border-radius: 10px;
         width: 100%;
         height: 20%;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        padding: 20px;
+
+        padding: 20px 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -633,15 +642,78 @@ button:hover {background-color: #fff ;
 .cal001 th {background-color: #8DDEC1;
             }
 table p {padding: 10px;
-        width: 40%;
-        height: 40%;
-        margin-left: 12px;}
-
+        cursor: pointer;
+}
+.cal001 tr td.on {background-color: #002396;
+                        color: #fff;}
 .selected-date {
                 font-weight: bold;
-                color: green;}
-/* 박스7설정 */
+                color: #fff;
+                background-color: #696969;
+                }
 
+
+/* 팝업창 설정 */
+.calendarTable td.clicked {
+            background-color: #3498db; /* 원하는 색상으로 변경하세요 */
+            color: #ffffff; /* 텍스트 색상을 원하는 색상으로 변경하세요 */
+        }
+.fixed {position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+left: 0;
+top: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+display: none;}
+.fixed.on{display: flex;}
+.fixed article {width: 38%;
+            height: 41vh;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            position: relative;
+            padding: 40px;
+            border: 2px #000 solid;}
+.fixed article p {position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 40px;
+                height: 40px;
+                }
+.fixed article p i {font-size: 30px;
+                    font-weight: bold;
+                    cursor: pointer;}
+.fixed article i:hover {color: #000;
+                                }
+.fixed article ul {width: 60%;
+            
+            }
+.fixed article ul li:nth-child(1) {
+    
+    color: #002396;
+    font-size: 27px;
+    font-weight: bold;}
+.fixed article li {padding: 7px;
+    
+    font-size: 20px;
+    font-weight: bold;}
+.fixed article div {margin-top: 20px;
+                background-color: #002396;
+                font-size: 14px;
+                color: #fff;
+                font-family: 'Gowun Batang', serif;
+                padding: 30px;
+                border-radius: 20px;
+                }
+.fixed article div strong {text-align: center; 
+                            font-size: 25px;
+                            font-family: none;
+                            font-weight: bold;
+                            color: #fff;
+                            padding-bottom: 20px;}
+/* 박스7설정 */
 
 .box7 {background-image: url(img/nasa7_bg.jpg);
         height: 500px;
@@ -668,20 +740,20 @@ table p {padding: 10px;
 /* 박스8설정 */
 .box8 {height: 70vh;
     background-color: #000;
-    }
+    padding-bottom: 50px;}
 
 .box8 .map {width: 100%;
-            height: 100%;}
+            height: 100%;
+            }
 .map_inner {font-size: 45px;
                 color: #fff;
                 font-weight: bold;
                 text-align: center;
-                padding: 20px;
-                padding: 40px 0;
+                padding: 30px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center}
-.map_inner span {width: 40%;
+.map_inner span {width: 30%;
                 height: 1px;
                 background-color: #fff;}
 .map_inner em {font-size: 20px;
@@ -698,7 +770,7 @@ table p {padding: 10px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 20px 0;}
+                margin-top: 40px;}
 .box8 .listBox8 strong {color: #fff;
             font-size: 22px;
             margin-right: 15px;}
@@ -707,7 +779,7 @@ table p {padding: 10px;
 
 
 /* 박스9설정 */
-.box9 {height: 250px;
+.box9 {height: 210px;
         background-color: #424242;
         display: flex;
             justify-content: center;
@@ -720,7 +792,8 @@ table p {padding: 10px;
 
 
 footer ul {display: flex;}
-footer li {padding-bottom: 15px;}
+footer li {padding-bottom: 15px;
+            }
 footer a {color: #777;}
 footer li:nth-child(2):before {display: inline-block;
     content: '\002f';

@@ -1,0 +1,142 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Inika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Julee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Julee&family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&family=Nothing+You+Could+Do&display=swap');
+@include hideTapHighlightColor();
+        @include hardwareAccel();
+        @include improveAntiAlias();
+*{margin: 0;    padding: 0;}
+ul,ol{list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+
+/* header 설정 */
+header {background-image: url(img/2.jpg);
+      position: fixed;
+      height: 100vh;  
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        ;}
+.fa-bars {color: #fff;
+        font-size: 20px;
+        margin: 50px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 250;}
+p {color: #fff;
+        font-family: 'Inria Serif', serif;
+        padding-left: 50px;
+        font-weight: bold;
+        font-size: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 12%; left: 0%;}
+.w{position: absolute;
+          left: 2%; top:20%;}
+.r {position: absolute;
+  left: 6%; top:30%}
+
+
+/* vid설정 */
+
+article video {height: 100%;
+  width: auto;
+  opacity: 0;}
+.l3000 {transform: scale(1.5);
+      transform: translateX(-150px);}
+
+/*div 설정 */
+  article div {position: absolute;
+    top: 300px;
+    height: 0;
+    background-color: #000;
+opacity: 0.5;
+width: 100%;
+z-index: 1;
+transition: all 0.5s;   
+}
+
+article:hover div {height: 70px;
+                top: 380px;}
+/* article:hover {width: 35%;} */
+article:hover h2 {color: #fff;
+    border-left: 3px solid #fff}
+
+/* 섹션 설정 */
+section {position: fixed;
+          width: 100%;
+          height: 100%;
+          z-index: 1;}
+
+section article {width: 12%;
+  height: 100%;
+  float: right;
+  background-image: url(img/divider.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: relative;
+  
+  overflow: hidden;
+                  }
+article h2 {position: absolute;
+              top: 400px;
+              text-align: center;
+              left: 20px ;
+              border-left: 3px solid #555;
+              padding-left: 15px;
+              font-size: 20px;
+              font-weight: bold;
+              color: rgb(234, 234, 234);
+              z-index: 2;}
+
+
+/* tab설정 */
+#menu {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: -100%; /* 초기에 메뉴를 숨깁니다. *//* 원하는 메뉴 너비로 조정하세요. */
+
+  transition: left 0.5s ease; }
+    .nav img {width: 200px;
+          height: 70px;
+          position: absolute;
+          top: 7%;}
+
+.nav{ background-color: #000;
+  /* background-image: url(img/tab_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  height: 100vh;
+  position: relative;
+  width: 30%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;}
+
+.nav ul {}
+.nav li {margin-bottom: 50px;}
+.nav a {color: #fff;
+  font-size: 35px;
+  font-family: 'Notable', sans-serif;}
+.nav i {position: absolute;
+  color: #fff;
+  top: 30px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;}
+.nav a:hover {color: #000;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);}
+

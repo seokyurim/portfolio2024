@@ -1,0 +1,55 @@
+<메인>
+inika -한글
+
+font-family: 'Inika', serif;
+
+julee -숫자
+
+font-family: 'Julee', cursive;
+
+<프로필>
+notable 
+@import url('https://fonts.googleapis.com/css2?family=Inika&family=Julee&family=Notable&display=swap');
+
+font-family: 'Notable', sans-serif;
+
+
+ani
+
+-wobble top
+
+ display: inline-block;
+  transform-origin: 0 100%;
+
+  @include hideTapHighlightColor();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+
+  &:hover {
+    animation-name: wobble-top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+#menu {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: -100%; /* 초기에 메뉴를 숨깁니다. *//* 원하는 메뉴 너비로 조정하세요. */
+
+  transition: left 0.5s ease; }
+
+    .nav img {width: 200px;
+          height: 70px;
+          position: absolute;
+          top: 7%;}
+
+.nav a:hover {color: #000;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);}
+
+Copylight ⓒ seokyurim 2024. All rights reserved.
