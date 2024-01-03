@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project002_thebarnnet_login</title>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/f3c480df09.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <style>
+        #wrap {display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                justify-content: center;
+
+                background-image: url(img/pattern011.png);}
+        header {width: 20%;
+                height: 100px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0;}
+        header img {width: 200px;
+                    height: auto;
+                    }
+/* sec1 설정 */
+        section {width: 40%;
+                height: 50%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: #fff;
+                border: 2px solid rgb(193, 193, 193);
+                border-radius: 20px;
+                padding: 50px 0;
+                box-shadow: 5px 5px 5px 5px gray;
+                position: relative;}
+    /* 아이디 */
+        section form input {display: flex;
+                        flex-direction: column;
+                        padding: 10px 40px;
+                        margin: 20px;
+                        width: 80%;
+                        }
+    /* 로그인 버튼 */
+        section .loginBox {background-color: #004833;
+                border: 1px solid #111;
+                border-radius: 55px;
+                padding: 0 10px;
+                cursor: pointer;
+                width: 28%;
+                text-align: center;}
+        section .loginBox p {color: #efefef;}
+            .loginBox:hover{background-color: #efefef;}
+            .loginBox:hover p {color: #004833;}
+
+    /* 체크버튼 */
+        .checkbox {
+            display: flex;
+            margin: 0 auto;
+            padding: 20px;}
+        .checkbox input {}
+        .checkbox label {font-size: 12px;
+                        text-align: left;
+                        }
+            
+        section h2 {color: #004833;
+                    font-size: 30px;}
+
+    /* box2 설정 */
+    section .box2 {display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items:center ;}
+
+    section .box2 p {margin: 40px;
+                    cursor: pointer;
+                    color: slategrey;
+                    font-size: 13px;}
+    section .box2 p:hover {color: #004833;
+                         /* border-bottom: 1px solid #111; */
+                        box-sizing: border-box;}
+
+    /* naver btn */
+    #naver_id_login {/*position: absolute;
+                    right: 27%;
+                    bottom: 24%;*/
+                    padding-top: 10px;}
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <a href="index.html"><img src="img/logo_g-removebg-preview.png" alt=""></a>
+        </header>
+        <section>
+            <h2>LogIn</h2>
+            <form>
+                <input type="text" name="id" placeholder="ID">
+                <input type="password" name="password" placeholder="Password">
+            </form>
+            <div class="checkbox">
+                <input type="checkbox" id="scales" name="scales" checked>
+                <label for="scales">로그인 상태 유지</label>
+            </div>
+            <div class="loginBox">
+                <p>로그인</p>
+            </div>
+    <!-- 네이버 로그인 버튼 노출 영역 -->
+            <div id="naver_id_login"></div>
+
+            <div class="box2">
+                <p>Find Password</p>
+                <p>Find ID</p>
+                <p>Register</p>
+            </div>
+        </section>
+    </div>
+
+
+    
+    <!-- //네이버 로그인 버튼 노출 영역 -->
+<script type="text/javascript">
+    var naver_id_login = new naver_id_login("3ghdN2lmwUsCobMMIK8z", "YOUR_CALLBACK_URL");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("wihte", 3,50);
+    naver_id_login.setDomain("YOUR_SERVICE_URL");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+
+    // var naverIdLogin = new naver.LoginWithNaverId({
+
+    //     clientId:"3ghdN2lmwUsCobMMIK8z", //클라이언트아이디작성
+    //     callbackUrl:"YOUR_CALLBACK_URL", //callbackUrl을 작성
+    //     isPopup:false, //팝업연동처리
+    //     loginButton:{color:"green",type:3,height:60} //로그인타입을 지정함
+
+    // })
+
+    // naverLogin.init();
+</script>
+</body>
+</html>

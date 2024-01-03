@@ -28,7 +28,7 @@ img {
 }
 
 body {background-color: #efefef;
-    cursor: url('img/cursor.png')1 1, auto;}
+    cursor: url('img/cur4.png')1 1, auto;}
 
 /* header 설정 */
 .header {
@@ -66,10 +66,10 @@ body {background-color: #efefef;
 .menu img {
     width: 150px;
     height: 120px;
-    margin-left: 200px;
+    margin-left: 130px;
 }
 
-.menu .util {}
+.menu .util em {padding: 5px;}
 
 .util a {
     margin-left: 20px;
@@ -115,7 +115,6 @@ body {background-color: #efefef;
 .main {
     background-image: url(img/main_img1.jpg);
     background-size: contain;
-
     height: 100vh;
     background-position: center;
     background-attachment: fixed;
@@ -692,11 +691,13 @@ strong {
     z-index: 10;
     bottom: 5%;
     left: 14%;
+    
 }
 
 .vid2_img2 img {
     width: 100%;
     height: 100%;
+    box-shadow: rgba(194, 198, 167, 0.8);
 }
 
 
