@@ -23,7 +23,7 @@ $(function(){
         $(this).find('p').stop().animate({'right':'-310px'},200)
     });
 
-
+// 메뉴바 클릭 하면 옆으로 나와라
  $('.fa-bars').click(function(){
     $('#menu').stop().animate({'left':0},200)
     $('html body').css({'background':'black'},200)
@@ -36,7 +36,7 @@ $(function(){
 // 색션화면
 $('section').mousewheel(function(event, delta){
     event.preventDefault()
-    // 마우스 휘을 올렸을 때
+    // 마우스 휠을 올렸을 때
     if(delta>0){
         var prev = $(this).prev().offset().top;
         $('html, body').stop().animate({'scrollTop':prev},1500,'easeOutBounce')

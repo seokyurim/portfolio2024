@@ -134,7 +134,8 @@ strong {color: #fff;
   }
 .box2 li.on {transform: scale(1.3);
   z-index: 100;}
-.box2 img{filter: drop-shadow(5px 5px 5px #fff);
+.box2 img{
+  /* filter: drop-shadow(5px 5px 5px #fff); */
   height: 420px;
   width: 300px;
   }
