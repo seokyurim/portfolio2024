@@ -1,0 +1,248 @@
+@charset 'UTF-8';
+@import url(https://db.onlinewebfonts.com/c/8914c48bb6cbcf51c389da71e776340d?family=BM+HANNA+11yrs+old);
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+*{margin: 0;    padding: 0;}
+ul,ol{list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-family: 'Black Han Sans';}
+header {background-color: #2F4858;
+        padding-top: 15px;
+        height: 100vh;
+        width: 100%;
+        position: fixed;}
+#wrap {width: 98%;
+    height: 97%;
+    margin: 0 auto;
+    background-color: #FFFCF5;
+    border-radius: 50px;}
+#wrap>div {height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;}
+.menu {position: absolute;
+        top: -18%;
+        right: 2%;
+        z-index: 100;}
+.menu ul {display: flex;
+        }
+.menu li {}
+.menu a {font-size: 25px;
+        color: #2F4858;
+        padding: 20px;
+        transition: 0.35s;
+        }
+        .menu a:hover {
+            text-shadow: 0 -1px 0 #fff, 0 1px 0 #888888, 0 2px 0 #888888, 0 3px 0 #888888, 0 4px 0 #888888, 0 5px 0 #888888;
+            animation-play-state: paused;}
+          
+.menu li a img {width: 30px;
+                height: 40px;
+                padding-top: 10px;
+                animation: blink-effect 1s step-end infinite;}
+.fa-reply-all {color: #2F4858;
+                        position: absolute;
+                        top: 5%;
+                        left: 3%;
+                        font-size: 40px;
+                        cursor: pointer;
+                        z-index: 10;
+                        transition: all 0.5s linear;}
+.fa-reply-all:hover {color: #D13F00;
+    transform: rotateY( 360deg );}
+    
+/* box1 설정 */
+.box1 {position: relative; 
+    }
+.box1 h2 {font-size: 150px;
+        color: #D13F00;
+        font-weight: bold;
+        padding-top: 40px;}
+.box1 img {position: absolute;
+            top: 57%;
+            left: 63%;}
+.box1 ul {display: flex;
+        position: absolute;
+        border-bottom: 1px #2F4858 solid;
+        }
+        /* text-decoration: underline;} */
+.box1 li {font-size: 25px;
+    padding: 5px 10px;
+    color: #454545;}
+.box1 i {padding: 7px;}
+span {  animation: blink-effect 1s step-end infinite;
+        border: #2F4858 0.5px solid;
+        height: 5px;
+        padding: 20px 0;}
+
+@keyframes blink-effect {
+            50% {
+            opacity: 0;
+            }}
+
+/* box2 설정 */
+.box2 {}
+.box2>div{margin: 14px;}
+
+/* skill 설정 */
+.skill {border: 1px #2F4858 solid;
+        width: 25%;
+        position: relative;
+        height: 350px;
+        border-end-end-radius: 15px;
+        border-bottom-left-radius: 15px;}
+.skill_title {background-color: #CDD6DE;
+            }
+.skill_title h4 {color: #D13F00;
+                font-size: 30px;
+                border-bottom: 1px #2F4858 solid;
+                padding: 20px;
+                }
+.title_img{}
+.title_img img{position: absolute;
+    top: 15px;
+    left: 0;
+    opacity: 0.5;}
+
+/* 막대그래프 설정 */
+.ul {display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77%;}
+.skill .ul1 {width: 50%;}
+.skill .ul1 li {display: flex;
+    justify-content: center;
+    align-items: center;}
+.skill .ul1 img {width: 60px;
+                height: 60px;}
+
+.skill .ul2 {width: 50%;
+            }
+.skill .ul2 li {display: flex;
+    justify-content: center;
+    align-items: center;}
+.skill .ul2 img {width: 60px;
+    height: 60px;}
+
+
+/* bar 설정 */
+.progress-bar {
+    width: 150px;
+    height: 20px;
+    background-color: #2F4858;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+.progress-bar .progress {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+
+.progress-bar .progress1 {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+
+.progress-bar .progress2 {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+.progress-bar .progress3 {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+.progress-bar .progress4 {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+.progress-bar .progress5 {
+    width: 0;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #D13F00;
+    color: #fff;
+    font-family: 'Inria Serif', serif;
+}
+/* edu 설정 */
+
+.edu {border: 1px #2F4858 solid;
+    width: 25%;
+    position: relative;
+    height: 350px;
+    border-end-end-radius: 15px;
+    border-bottom-left-radius: 15px;}
+.edu_title {background-color: #CDD6DE;
+        }
+.edu_title h4 {color: #D13F00;
+            font-size: 30px;
+            border-bottom: 1px #2F4858 solid;
+            padding: 20px;}
+.edu ul {padding: 7px;}
+.edu li {display: flex;
+    padding: 10px;}
+.edu .year {font-size: 19px;
+    padding: 5px;
+    font-family: 'Black Han Sans';
+    color: #454545;
+    width: 30%;
+    text-align: center;
+    float: left;}
+.edu p{font-size: 20px;
+        padding-top: 5px;
+        color: #454545;
+        text-align: left;
+        width: 70%;
+        font-family: "BM HANNA 11yrs old";
+}
+
+/* key 설정 */
+.key {border: 1px #2F4858 solid;
+            width: 25%;
+            position: relative;
+            height: 350px;
+            border-end-end-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+.key_title {background-color: #CDD6DE;
+                }
+.key_title h4 {color: #D13F00;
+                    font-size: 30px;
+                    border-bottom: 1px #2F4858 solid;
+                    padding: 20px;
+                    }
+.key_img {display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;}                    
+.key img{}
+
