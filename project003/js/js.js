@@ -80,13 +80,13 @@ $('.box2 p').click(function(){
     
     var onListItem = document.querySelector('.on');
 
-      if (!onListItem) {
+    if (!onListItem) {
         // 'on' 클래스가 없을 때 모든 이미지에 'no-drop-shadow' 클래스를 추가
         var allImages = document.querySelectorAll('.box2 img');
         allImages.forEach(function(image) {
-          image.classList.add('no-drop-shadow');
+        image.classList.add('no-drop-shadow');
         });
-      }
+    }
 
 })
     setInterval(function(){

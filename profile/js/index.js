@@ -23,5 +23,22 @@ var welcomSection = $('.welcome-section'),
       enterButton.on('click',function(e){
       	e.preventDefault();
         welcomSection.addClass('content-hidden').fadeOut();
-      })
+      });
+
+
+      // 아이콘 클릭 했을 때
+var i=0;
+$('#infor').click(function(){
+
+    i++
+    if(i==2)i=0
+    if(i==1){
+        $('.i_txt').addClass('visible');
+        $('.i_txt').css ({'opacity':'1', 'visibility':'visible'})
+    }
+    else{
+        $('.i_txt').removeClass('visible');
+        $('.i_txt').css ({'opacity':'0', 'visibility':'hidden'});
+    }
+});
 })

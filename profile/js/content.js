@@ -12,7 +12,7 @@ t++ >= totalMinwon && clearInterval(barAnimation)
 
 const baar = document.querySelector("#minwon-bar .progress1")
 
-let totalMinwon1 = 85, resolveMinwon1 = 12
+let totalMinwon1 = 80, resolveMinwon1 = 12
 let tt = 0
 
 const barAnimation1 = setInterval(() => {
