@@ -35,6 +35,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: sofia-pro, sans-serif;
+	overflow: hidden;
 }
 
 /* Grainy texture animation by Geoff Graham https://css-tricks.com/snippets/css/animated-grainy-texture/ */
@@ -84,6 +85,7 @@ a:focus {
 	position: relative;
 	z-index: 1000;
 	line-height: 1;
+	
 }
 
 .frame__title {font-family: 'Nothing You Could Do', cursive;
@@ -112,6 +114,7 @@ a:focus {
 	color: var(--color-text);
 }
 
+/* menu 설정 */
 .menu {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -145,7 +148,7 @@ a:focus {
 	transition: opacity 0.4s;
 }
 
-.menu__item-link::before {
+/* .menu__item-link::before {
 	all: initial;
 	font-family: sofia-pro, sans-serif;
 	counter-increment: menu;
@@ -154,7 +157,7 @@ a:focus {
 	bottom: 60%;
 	left: 0;
 	pointer-events: none;
-}
+} */
 
 .menu__item-link:hover {
 	transition-duration: 0.1s;
