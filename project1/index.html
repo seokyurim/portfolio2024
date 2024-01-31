@@ -175,9 +175,9 @@ $('#reserveButton').click(function(e){
         var id = $(this).index() 
         $('.cal001 tr td').removeClass('on')
         $(this).addClass('on')
-    })
+    });
 
-
+    $('html,body').stop().animate({'scrollTop':0},1000);
 })
 </script>
 
@@ -217,7 +217,7 @@ $('#reserveButton').click(function(e){
         <div class="box2">
             <div class="vid">
                 <video autoplay loop muted>
-                    <source src="img/5 (2).mp4">
+                    <source src="img/2.mp4">
                 </video>
             </div>
             <div class="hero">
@@ -431,7 +431,6 @@ $('#reserveButton').click(function(e){
     </div>
 
     <div class="box6">
-        
         <div class="box6-1">
             <span></span>
             <p><em>단체&개인</em> 방문예약</p>
@@ -464,32 +463,30 @@ $('#reserveButton').click(function(e){
                             <label for="people">인원 수</label>
                             <i class="fa fa-users" aria-hidden="true"></i>
                             <select name="people" id="people">
-                                <option value="1">1명</option>
-                                <option value="2">2명</option>
-                                <option value="3">3명</option>
-                                <option value="4">4명</option>
-                                <option value="5">5명</option>
-                                <option value="5">6명</option>
-                                <option value="5">7명</option>
-                                <option value="5">8명</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="5">10</option>
                             </select>
                         </div>
-
                     </form>
                 </div>
             </div>
             
         
-            <div class="formBox1">
-
-                <h3><i class="fa fa-circle" aria-hidden="true"></i>방문하실 날짜를 선택해 주세요</h3>
+        <div class="formBox1">
+            <h3><i class="fa fa-circle" aria-hidden="true"></i>방문하실 날짜를 선택해 주세요</h3>
                 <div class="txtBox">
-
                     <form action="#" class="form">
-
                         <div class="check">
                             <ul>
-                                <li>&#9632; 예약가능</li>
+                                <li>&#9632;예약가능</li>
                                 <li>&#9633;잔여 수량 없음</li>
                                 <li>&#9678;미운영</li>
                             </ul>
@@ -523,13 +520,10 @@ $('#reserveButton').click(function(e){
                                 </tbody>
                             </table>
                         </div>
-
                     </form>
-                        
                 </div>
-            
-            </div>
         </div>
+    </div>
         <div class="fixed">
             <article>
                 <p><i class="fa fa-times-circle-o" aria-hidden="true"></i></p>
@@ -539,13 +533,12 @@ $('#reserveButton').click(function(e){
                     <li>예약인원 : <span></span></li>
                     <li>성명 : <span></span></li>
                 </ul>
-
                 <div><strong>안내 사항</strong> <br>
                     -예약을 완료한 뒤 입장 일정 변경은 불가하며, 일정 변경을 희망하실 경우 새롭게 예약을 해주셔야 합니다.  <br>
--더 많은 분들이 경험하실 수 있도록 대리 예약 또는 대리 구매를 지양해주세요. <br>
--원할한 입장을 위하여 현장 직원 안내에 적극 동참 부탁드립니다. <br>
--동일 휴대폰 기준 5회 이상의 예약이 접수 된 경우 어뷰징으로 간주되어 전체 취소 되오니, 확인 후 예약 바랍니다.
-</div>
+                    -더 많은 분들이 경험하실 수 있도록 대리 예약 또는 대리 구매를 지양해주세요. <br>
+                    -원할한 입장을 위하여 현장 직원 안내에 적극 동참 부탁드립니다. <br>
+                    -동일 휴대폰 기준 5회 이상의 예약이 접수 된 경우 어뷰징으로 간주되어 전체 취소 되오니, 확인 후 예약 바랍니다.
+                </div>
             </article>
         </div>
     </div>
