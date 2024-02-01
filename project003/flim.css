@@ -19,6 +19,14 @@ img {border: none;
 body {font-family: 'Inria Serif', serif;}
 
 /* 페이지1 설정 */
+.fa-arrow-circle-up {position: fixed;
+                    bottom: 40px;
+                    right: 30px;
+                    color: #eee;
+                    font-size: 35px;
+                    cursor: pointer;
+                    z-index: 30;
+                    display: none;}
 .page1{
     overflow:hidden;
       position: relative;

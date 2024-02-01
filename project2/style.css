@@ -896,13 +896,17 @@ footer {
 
 .footer_kor {
     margin-top: 8px;
-    color: #7A7A7A;
+    color: rgb(170, 170, 170);
 }
 
 .footer_txt {
     font-size: 14px;
     color: #fff;
     padding-top: 20px;
+}
+
+.footer_txt p {
+    color: #7A7A7A;
 }
 
 .footer_logo {

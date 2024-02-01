@@ -95,6 +95,19 @@ $('.box2 p').click(function(){
 
     $(".draw").addClass("-do");
 
+    // top를 누르면 맨 위로 올라가라
+    $('.fa-arrow-circle-up').click(function(){
+        $(window).scrollTop(0);
+        $('html,body').animate({scrollTop:0},2000);
+    });
+
+    $(window).scroll(function(){
+        if($(this).scrollTop()>500) {
+            $('.fa-arrow-circle-up').fadeIn();
+        } else {
+            $('.fa-arrow-circle-up').fadeOut();
+        }
+    })
 })
 
 
