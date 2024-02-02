@@ -794,9 +794,12 @@ display: none;}
 .box9 .footer_logo {width: 150px;
                 height: 150px;
                 margin: 0 auto;}
-.box9 .footer_logo img{width: 150px;
+.box9 .footer_logo img{width: 100%;
                         }
-
+.box9 footer p {font-size: 15px;
+            color: rgb(190, 190, 190);
+            text-align: center;
+            padding-bottom: 5px;}
 
 footer ul {display: flex;}
 footer li {padding-bottom: 15px;

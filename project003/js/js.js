@@ -95,19 +95,22 @@ $('.box2 p').click(function(){
 
     $(".draw").addClass("-do");
 
-    // top를 누르면 맨 위로 올라가라
-    $('.fa-arrow-circle-up').click(function(){
-        $(window).scrollTop(0);
-        $('html,body').animate({scrollTop:0},2000);
-    });
-
+// top으로 부드럽게 올라가라.
     $(window).scroll(function(){
-        if($(this).scrollTop()>500) {
+        if($(this).scrollTop()>800) {
             $('.fa-arrow-circle-up').fadeIn();
         } else {
             $('.fa-arrow-circle-up').fadeOut();
         }
-    })
+        // if ($(window).scrollTop()<0) {
+        //     $('.fa-arrow-circle-up').hide();
+        // }
+    });
+     // top를 누르면 맨 위로 올라가라
+    $('.fa-arrow-circle-up').click(function(){
+        $(window).scrollTop(0);
+        $('html,body').animate({scrollTop:0},800);
+    });
 })
 
 
